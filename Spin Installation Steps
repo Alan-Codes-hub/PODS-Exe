@@ -1,0 +1,66 @@
+Step 1
+	Download the zip file from github (https://github.com/nimble-code/Spin)
+	Paste it in the home folder
+	Extract it there.
+	SpinMaster folder will be extracted.
+
+Step 2
+	Open the terminal in the SpinMaster folder
+	Run the following commands
+	   sudo apt-get update -y
+	   sudo apt-get install -y bison
+	navigate to "Src" (cd Src)
+	run "sudo su"
+	run "make" 
+	
+Step 3
+	Run "ls" command and you can see the spin executable file in green colour.
+	Also if you open the "optional_gui" folder in Spin_master you can see the 'iSPin.tlc' file as well.
+	
+Step 4 - Setting the path for the spin executable
+
+	Open a terminal in the home directory
+	Run "sudo su"
+	Open the bash file in any text editor
+	gedit ~/.bashrc
+	Copy the file path of spin exe file and iSPin.tlc from the file manager 
+	(in this case : /home/alan/Spin-master/Src & /home/alan/Spin-master/optional_gui)
+	
+	Add folllowing code at the end of the bashrc file
+	
+	#SPIN and
+	export PATH="/home/alan/Spin-master/Src:$PATH"
+
+	#SPIN and 
+	export PATH="/home/alan/Spin-master/optional_gui:$PATH"
+
+	Save & Close the bashrc file.
+
+Step 5 - Asking the OS to consider the new bashrc file whenever I type "spin" command.
+
+	Go back to the terminal opened and run : source ~/.bashrc
+	Now if you run spin command in the same terminal you will get the spin version info and and an
+	ERROR Msg stating no file name specified.
+	
+Step 6 - Opening GUI
+	
+	Close the previous terminal.
+	Open the optional_gui folder.
+	Open a terminal from there.
+	Execute the iSPin.tcl file.
+	(./ispin.tcl)
+	Error stating no version of SPIN found.
+	Get into super user privileges.
+	(sudo su)
+	Then execute the ispin.tcl file.
+	The GUI will open up.
+	
+Possible Errors - while executing ispin.tcl
+
+	1.wish not found
+		install wish
+		(apt-get install wish)
+	
+	
+	
+	
